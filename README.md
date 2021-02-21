@@ -1,3 +1,5 @@
+This is a customized version of the original repo, excluding WP-CLI and including PHP Pear, APCU and IGBINARY extensions.
+
 # LiteSpeed Docker Container
 [![Build Status](https://travis-ci.com/litespeedtech/lsws-docker-env.svg?branch=master)](https://hub.docker.com/r/litespeedtech/litespeed)
 [![docker pulls](https://img.shields.io/docker/pulls/litespeedtech/litespeed?style=flat&color=blue)](https://hub.docker.com/r/litespeedtech/litespeed) 
@@ -22,11 +24,7 @@ The system will regulary build LiteSpeed Latest stable version, along with the l
 ### Downloading an image
 Download the litespeed image, we can use latest for latest version
 ```
-docker pull litespeedtech/litespeed:latest
-```
-or specify the LiteSpeed version with lsphp version
-```
-docker pull litespeedtech/litespeed-beta:5.4.5-lsphp74
+docker pull soruman/litespeed:latest
 ```
 ### Starting a Container
 ```

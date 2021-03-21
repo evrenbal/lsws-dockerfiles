@@ -22,8 +22,9 @@ ADD htpasswd $LS_FD/admin/conf/htpasswd
 
 #INSTALL PECL EXTENSIONS
 RUN	apt-get update \
-    &&/usr/local/lsws/$PHP_VERSION/bin/pecl channel-update pecl.php.net \
-  && cd ~ \
+	&& apt-get install pkg-config librabbitmq-dev \
+	&&/usr/local/lsws/$PHP_VERSION/bin/pecl channel-update pecl.php.net \
+  	&& cd ~ \
 	&& /usr/local/lsws/$PHP_VERSION/bin/pecl install amqp \
 	&& printf "yes\n" | /usr/local/lsws/$PHP_VERSION/bin/pecl install swoole \
 	&& /usr/local/lsws/$PHP_VERSION/bin/pecl install mongodb \

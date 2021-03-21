@@ -24,9 +24,9 @@ ADD htpasswd $LS_FD/admin/conf/htpasswd
 RUN	apt-get update \
     &&/usr/local/lsws/$PHP_VERSION/bin/pecl channel-update pecl.php.net \
   && cd ~ \
-	&& /usr/local/lsws/$PHP_VERSION/bin/pecl pecl install amqp \
+	&& /usr/local/lsws/$PHP_VERSION/bin/pecl install amqp \
 	&& printf "yes\n" | /usr/local/lsws/$PHP_VERSION/bin/pecl install swoole \
-	&& /usr/local/lsws/$PHP_VERSION/bin/pecl pecl install mongodb \
+	&& /usr/local/lsws/$PHP_VERSION/bin/pecl install mongodb \
 	&& /usr/local/lsws/$PHP_VERSION/bin/pecl clear-cache
 
 	
